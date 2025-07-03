@@ -9,19 +9,6 @@ export class AppRunnerStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
-    const domain = 'jdbtech.io'
-    
-   
-    const domainCert = new acm.Certificate(this, 'nymbl-info-cert', {
-      domainName: domain,
-      validation: acm.CertificateValidation.fromDns(),
-    });
-    
-    const wildcardCert = new acm.Certificate(this, 'wildcard-nymbl-info-cert', {
-      domainName: `*.${domain}`,
-      validation: acm.CertificateValidation.fromDns(),
-    });
-    
     const repo = new ecr.Repository(this, 'spring-idp-repo', {
       repositoryName: 'spring-idp-repo',
       removalPolicy: cdk.RemovalPolicy.DESTROY
