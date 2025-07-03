@@ -59,7 +59,8 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
+			<version>1.18.38</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>

@@ -7,7 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Entity
-public @Data class ClientUser {
+@Data
+public class ClientUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
