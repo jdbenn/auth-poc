@@ -9,7 +9,7 @@ export class AppRunnerStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
-    const domain = 'nymbl.info'
+    const domain = 'jdbtech.io'
     
    
     const domainCert = new acm.Certificate(this, 'nymbl-info-cert', {
